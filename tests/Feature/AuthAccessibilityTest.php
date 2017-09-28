@@ -6,7 +6,7 @@ use App\User;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class AuthAccesibilityTest extends TestCase
+class AuthAccessibilityTest extends TestCase
 {
     use RefreshDatabase;
 
