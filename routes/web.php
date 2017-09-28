@@ -22,3 +22,8 @@ Route::group(['prefix' => 'admin'], function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['namespace' => 'Website'], function () {
+    Route::get('/blog', 'PostController@blog')->name('website.blog');
+    Route::get('/blog/{post}', 'PostController@article')->name('website.article');
+});
