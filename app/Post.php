@@ -13,9 +13,8 @@ class Post extends VoyagerPost
      */
     public function getRouteKeyName()
     {
-        return "slug";
+        return 'slug';
     }
-
 
     /**
      * Get the post URI.
