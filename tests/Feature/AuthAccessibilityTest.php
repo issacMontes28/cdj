@@ -6,7 +6,7 @@ use App\User;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class AuthAccesibilityTest extends TestCase
+class AuthAccessibilityTest extends TestCase
 {
     use RefreshDatabase;
 
@@ -55,5 +55,13 @@ class AuthAccesibilityTest extends TestCase
         $this->get('home')
             ->assertStatus(302)
             ->assertRedirect('login');
+    }
+
+    /** @test */
+    public function testEmployeesLoginPage()
+    {
+        $this->get('/admin/login')
+            ->assertStatus(200)
+            ->assertSee('Voyager');
     }
 }

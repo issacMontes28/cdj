@@ -5,7 +5,12 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+                <div class="panel-heading">
+                    Login
+                    <span class="clearfix pull-right">
+                        <a href="{{ route('voyager.dashboard') }}">I'm an employee</a>
+                    </span>
+                </div>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
