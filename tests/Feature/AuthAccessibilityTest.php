@@ -56,4 +56,12 @@ class AuthAccessibilityTest extends TestCase
             ->assertStatus(302)
             ->assertRedirect('login');
     }
+
+    /** @test */
+    public function testEmployeesLoginPage()
+    {
+        $this->get('/admin/login')
+            ->assertStatus(200)
+            ->assertSee('Voyager');
+    }
 }
