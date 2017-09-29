@@ -14,9 +14,9 @@ class User extends VoyagerUser
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+     protected $fillable = [
+         'name', 'email', 'password','provider','provider_id'
+     ];
 
     /**
      * The attributes that should be hidden for arrays.
