@@ -11,6 +11,10 @@
 |
 */
 
+//Routes for socialite (facebook)
+Route::get('auth/{provider}', 'LoginController@redirectToProvider');
+Route::get('auth/{provider}/callback', 'LoginController@handleProviderCallback');
+
 Route::get('/', function () {
     return view('welcome');
 });
